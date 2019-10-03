@@ -20,9 +20,9 @@ GT honor code violation.
   		   	  			  	 		  		  		    	 		 		   		 		  
 -----do not edit anything above this line---  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
-Student Name: Tucker Balch (replace with your name)  		   	  			  	 		  		  		    	 		 		   		 		  
-GT User ID: tb34 (replace with your User ID)  		   	  			  	 		  		  		    	 		 		   		 		  
-GT ID: 900897987 (replace with your GT ID)  		   	  			  	 		  		  		    	 		 		   		 		  
+Student Name: Jie Lyu	   	  			  	 		  		  		    	 		 		   		 		  
+GT User ID: jlyu31   	  			  	 		  		  		    	 		 		   		 		  
+GT ID: 903329676		   	  			  	 		  		  		    	 		 		   		 		  
 """  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
 import numpy as np  		   	  			  	 		  		  		    	 		 		   		 		  
@@ -32,21 +32,20 @@ import math
 # better for linear regression than decision trees  		   	  			  	 		  		  		    	 		 		   		 		  
 def best4LinReg(seed=1489683273):  		   	  			  	 		  		  		    	 		 		   		 		  
     np.random.seed(seed)  		   	  			  	 		  		  		    	 		 		   		 		  
-    X = np.zeros((100,2))  		   	  			  	 		  		  		    	 		 		   		 		  
-    Y = np.random.random(size = (100,))*200-100  		   	  			  	 		  		  		    	 		 		   		 		  
-    # Here's is an example of creating a Y from randomly generated  		   	  			  	 		  		  		    	 		 		   		 		  
-    # X with multiple columns  		   	  			  	 		  		  		    	 		 		   		 		  
-    # Y = X[:,0] + np.sin(X[:,1]) + X[:,2]**2 + X[:,3]**3  		   	  			  	 		  		  		    	 		 		   		 		  
+    X = np.random.random(size = (100,6))	   	  			  	 		  		  		    	 		 		   		 		  
+    Y = X[:,0] * 1 + X[:,1] * 10 + X[:,2] * 15 + X[:,3] * 7 + X[:,4] * 10 + X[:,5] * 20		    	 		 		   		 		  	   	  			  	 		  		  		    	 		 		   		 		  
     return X, Y  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
 def best4DT(seed=1489683273):  		   	  			  	 		  		  		    	 		 		   		 		  
-    np.random.seed(seed)  		   	  			  	 		  		  		    	 		 		   		 		  
-    X = np.zeros((100,2))  		   	  			  	 		  		  		    	 		 		   		 		  
-    Y = np.random.random(size = (100,))*200-100  		   	  			  	 		  		  		    	 		 		   		 		  
+    np.random.seed(seed)
+    zeros = np.zeros((100,))
+    ones = np.ones((100,))
+    X = np.random.random(size = (100,3))
+    Y = np.where(X[:,0] > 0.5, ones, zeros)
     return X, Y  		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
 def author():  		   	  			  	 		  		  		    	 		 		   		 		  
-    return 'tb34' #Change this to your user ID  		   	  			  	 		  		  		    	 		 		   		 		  
+    return 'jlyu31'		   	  			  	 		  		  		    	 		 		   		 		  
   		   	  			  	 		  		  		    	 		 		   		 		  
 if __name__=="__main__":  		   	  			  	 		  		  		    	 		 		   		 		  
-    print("they call me Tim.")  		   	  			  	 		  		  		    	 		 		   		 		  
+    print("not implemented")  		   	  			  	 		  		  		    	 		 		   		 		  
